@@ -1,84 +1,84 @@
 [
   {
-    "objectID": "index.html#introdução",
-    "href": "index.html#introdução",
+    "objectID": "index_1.html#introdução",
+    "href": "index_1.html#introdução",
     "title": "Apresentação",
     "section": "Introdução",
     "text": "Introdução\n\nTítulo do artigo\n\nFatores associados à iniciação tabágica em adolescentes escolares\n\nAutores\n\nCarolina de Castilhos Teixeira, Luciano Santos Pinto Guimarães, Isabel Cristina Echer\n\nPublicação:"
   },
   {
-    "objectID": "index.html#motivação-e-objetivo",
-    "href": "index.html#motivação-e-objetivo",
+    "objectID": "index_1.html#motivação-e-objetivo",
+    "href": "index_1.html#motivação-e-objetivo",
     "title": "Apresentação",
     "section": "Motivação e Objetivo",
     "text": "Motivação e Objetivo\n\nMotivação da pesquisa\n\nA adolescência é uma fase crítica de formação de identidade, com grande influência de fatores sociais, familiares e culturais.\nMesmo com a ampla divulgação dos malefícios do tabagismo e avanços na área da saúde, muitos jovens continuam iniciando o hábito de fumar.\nO processo de parar de fumar é difícil após a dependência, tornando a prevenção da iniciação fundamental. Porém o artigo destaca que existe uma lacuna na literatura sobre os fatores que levam à iniciação tabágica.\n\nObjetivo da pesquisa\n\nIdentificar os fatores associados à iniciação tabágica em adolescentes escolares."
   },
   {
-    "objectID": "index.html#coleta-da-amostra",
-    "href": "index.html#coleta-da-amostra",
+    "objectID": "index_1.html#coleta-da-amostra",
+    "href": "index_1.html#coleta-da-amostra",
     "title": "Apresentação",
     "section": "Coleta da amostra",
     "text": "Coleta da amostra"
   },
   {
-    "objectID": "index.html#section",
-    "href": "index.html#section",
+    "objectID": "index_1.html#section",
+    "href": "index_1.html#section",
     "title": "Apresentação",
     "section": "",
-    "text": "Características\nInsatisfeito\nN = 361\nNeutro\nN = 591\nSatisfeito\nN = 1001\nValor-p2\n\n\n\n\nGenero\n\n\n\n\n\n\n0,8\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\nCliente\n\n\n\n\n\n\n0,7\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\nIdade\n\n\n\n\n\n\n0,7\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\nTipo_Viagem\n\n\n\n\n\n\n0,021\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\nClasse\n\n\n\n\n\n\n0,038\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\nDistancia\n\n\n\n\n\n\n0,6\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\nAtraso_Partida\n\n\n\n\n\n\n&lt;0,001\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\nAtraso_Chegada\n\n\n\n\n\n\n0,3\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)\n\n\n\n\n\n1 n (%)\n\n\n2 Teste qui-quadrado de independência; Teste exato de Fisher"
+    "text": "Foi realizado um estudo transversal em 2014 onde a população era composta por estudantes do ensino médio de 4 escolas, das quais duas públicas e duas particulares, da Região Sul do Brasil.\nConvidaram 1000 adolescentes, sendo estes o total de alunos matriculados no ensino médio das quatro escolas, mas apenas 864 participaram efetivamente, compondo a amostra final."
   },
   {
-    "objectID": "index.html#section-1",
-    "href": "index.html#section-1",
+    "objectID": "index_1.html#section-1",
+    "href": "index_1.html#section-1",
     "title": "Apresentação",
     "section": "",
-    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n-1,958\n0,441\n1,114\n\n\nEconômica Plus\n3,129\n-0,599\n-1,879\n\n\nExecutiva\n-0,211\n-0,225\n0,184\n\n\n\n\n\n\nServiço de check-in X Tipo de Viagem\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nViagem a negócios\n2,286\n0,785\n-2,496\n\n\nViagem pessoal\n-2,286\n-0,785\n2,496\n\n\n\n\n\n\nServiço de check-in X Atraso de partida\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nCom atraso\n6,089\n-1,608\n-3,250\n\n\nSem atraso\n-6,089\n1,608\n3,250"
+    "text": "Critérios de inclusão:\n\nTer mais de 12 anos;\nEstar matriculado nas escolas selecionadas;\nEstar cursando o ano letivo vigente.\n\nCritério de exclusão :\n\nProblemas neurológicos que impedissem responder ao questionário.\n\nFormas de coleta de dados:\n\nInstrumento autoaplicável, contendo questões sociodemográficas, status tabágico;\nInventário de depressão de Beck;\nEscala de Fagerström."
   },
   {
-    "objectID": "index.html#metodologia-estatística",
-    "href": "index.html#metodologia-estatística",
+    "objectID": "index_1.html#metodologia-estatística",
+    "href": "index_1.html#metodologia-estatística",
     "title": "Apresentação",
     "section": "Metodologia Estatística",
     "text": "Metodologia Estatística"
   },
   {
-    "objectID": "index.html#variáveis-de-análise",
-    "href": "index.html#variáveis-de-análise",
+    "objectID": "index_1.html#variáveis-de-análise",
+    "href": "index_1.html#variáveis-de-análise",
     "title": "Apresentação",
     "section": "Variáveis de análise",
     "text": "Variáveis de análise\n\nIniciação tabágica\n\nSe o aluno ja experimentou tabaco\n\nStatus tabágico\n\nSe ele consume tabaco regularmente"
   },
   {
-    "objectID": "index.html#fatores-de-exposição",
-    "href": "index.html#fatores-de-exposição",
+    "objectID": "index_1.html#fatores-de-exposição",
+    "href": "index_1.html#fatores-de-exposição",
     "title": "Apresentação",
     "section": "Fatores de exposição",
     "text": "Fatores de exposição\n\nSociodemográficos\n\nSexo\nRenda\nIdade\nCor de pele\nEscola\n\nContexto familiar\n\nCom quem mora\nRenda familiar\nRelação familiar\nFamiliares tabagistas"
   },
   {
-    "objectID": "index.html#testes-utilizados",
-    "href": "index.html#testes-utilizados",
+    "objectID": "index_1.html#testes-utilizados",
+    "href": "index_1.html#testes-utilizados",
     "title": "Apresentação",
     "section": "Testes Utilizados",
     "text": "Testes Utilizados\nO teste de Chi-Quadrado(\\(\\chi^2\\)) e o teste Exato de Fisher foram usados para verificar se há associação entre as variáveis categóricas, com o teste de Fisher sendo usado quando as frequências esperadas eram pequenas e o teste de \\(\\chi^2\\) não seria tão preciso."
   },
   {
-    "objectID": "index.html#resultados",
-    "href": "index.html#resultados",
+    "objectID": "index_1.html#resultados",
+    "href": "index_1.html#resultados",
     "title": "Apresentação",
     "section": "Resultados",
     "text": "Resultados"
   },
   {
-    "objectID": "index.html#associações-significativaschi2fisher",
-    "href": "index.html#associações-significativaschi2fisher",
+    "objectID": "index_1.html#associações-significativaschi2fisher",
+    "href": "index_1.html#associações-significativaschi2fisher",
     "title": "Apresentação",
     "section": "Associações significativas(\\(\\chi^2\\)/Fisher)",
     "text": "Associações significativas(\\(\\chi^2\\)/Fisher)\n\nIndivíduos de cor parda;\nAssociação com maior renda familiar;\nMorar com apenas um dos pais ou com outros familares;\nRelações familiares regulares ou ruins;\nPresença de familiares usuários de drogas."
   },
   {
-    "objectID": "index.html#conclusão",
-    "href": "index.html#conclusão",
+    "objectID": "index_1.html#conclusão",
+    "href": "index_1.html#conclusão",
     "title": "Apresentação",
     "section": "Conclusão",
     "text": "Conclusão\n\nDentre todos os fatores relacionados ao tabagismo, os mais fortes eram dentro do contexto familiar.\nO tabagismo não depende apenas de um único fator, mas de um conjunto de condições sociais, familiares e individuais.\n\nImportância do teste de Associação\nForam identificadas relações reais nos dados, dando base científica às conclusões, ou seja, transformam dados em evidência científica confiável.\nContribuição da pesquisa\nFornecer base para estratégias preventivas em saúde pública, especialmente voltadas ao ambiente familiar e escolar"
@@ -168,25 +168,11 @@
     "text": "Conclusão\n\nDentre todos os fatores relacionados ao tabagismo, os mais fortes eram dentro do contexto familiar.\nO tabagismo não depende apenas de um único fator, mas de um conjunto de condições sociais, familiares e individuais.\n\nImportância do teste de Associação\nForam identificadas relações reais nos dados, dando base científica às conclusões, ou seja, transformam dados em evidência científica confiável.\nContribuição da pesquisa\nFornecer base para estratégias preventivas em saúde pública, especialmente voltadas ao ambiente familiar e escolar"
   },
   {
-    "objectID": "index.html#resultados-.center-styletext-align-center",
-    "href": "index.html#resultados-.center-styletext-align-center",
+    "objectID": "index.html#construção-da-tabela-final",
+    "href": "index.html#construção-da-tabela-final",
     "title": "Apresentação",
-    "section": "Resultados {.center style=“text-align: center;”}",
-    "text": "Resultados {.center style=“text-align: center;”}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
-  },
-  {
-    "objectID": "index.html#scrollable",
-    "href": "index.html#scrollable",
-    "title": "Apresentação",
-    "section": "{.scrollable",
-    "text": "{.scrollable\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
-  },
-  {
-    "objectID": "index.html#tabela-dos-p-valores",
-    "href": "index.html#tabela-dos-p-valores",
-    "title": "Apresentação",
-    "section": "Tabela dos p-valores",
-    "text": "Tabela dos p-valores"
+    "section": "Construção da tabela final",
+    "text": "Construção da tabela final"
   },
   {
     "objectID": "index.html#verificação-dos-valores-esperados",
@@ -196,18 +182,25 @@
     "text": "Verificação dos valores esperados"
   },
   {
-    "objectID": "index.html#section-2",
-    "href": "index.html#section-2",
+    "objectID": "index.html#serviço-de-check-in-x-classe",
+    "href": "index.html#serviço-de-check-in-x-classe",
     "title": "Apresentação",
-    "section": "",
-    "text": "Variáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
+    "section": "Serviço de check-in X Classe",
+    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n12\n19,67\n33,33\n\n\nEconômica Plus\n4,43\n7,26\n12,31\n\n\nExecutiva\n19,57\n32,07\n54,36"
   },
   {
-    "objectID": "index.html#serviço-de-checkin-x-classe",
-    "href": "index.html#serviço-de-checkin-x-classe",
+    "objectID": "index.html#tabela-dos-p-valores",
+    "href": "index.html#tabela-dos-p-valores",
     "title": "Apresentação",
-    "section": "Serviço de checkin X Classe",
-    "text": "Serviço de checkin X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n12\n19,67\n33,33\n\n\nEconômica Plus\n4,43\n7,26\n12,31\n\n\nExecutiva\n19,57\n32,07\n54,36"
+    "section": "Tabela dos p-valores",
+    "text": "Tabela dos p-valores"
+  },
+  {
+    "objectID": "index.html#section",
+    "href": "index.html#section",
+    "title": "Apresentação",
+    "section": "",
+    "text": "Características\nInsatisfeito\nN = 361\nNeutro\nN = 591\nSatisfeito\nN = 1001\nValor-p2\n\n\n\n\nGenero\n\n\n\n\n\n\n0,8\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\nCliente\n\n\n\n\n\n\n0,7\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\nIdade\n\n\n\n\n\n\n0,7\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\nTipo_Viagem\n\n\n\n\n\n\n0,021\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\nClasse\n\n\n\n\n\n\n0,038\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\nDistancia\n\n\n\n\n\n\n0,6\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\nAtraso_Partida\n\n\n\n\n\n\n&lt;0,001\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\nAtraso_Chegada\n\n\n\n\n\n\n0,3\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)\n\n\n\n\n\n1 n (%)\n\n\n2 Teste qui-quadrado de independência; Teste exato de Fisher"
   },
   {
     "objectID": "index.html#análise-de-resíduos",
@@ -217,38 +210,24 @@
     "text": "Análise de resíduos"
   },
   {
-    "objectID": "index.html#serviço-de-checkin-x-classe-1",
-    "href": "index.html#serviço-de-checkin-x-classe-1",
+    "objectID": "index.html#section-1",
+    "href": "index.html#section-1",
     "title": "Apresentação",
-    "section": "Serviço de checkin X Classe",
-    "text": "Serviço de checkin X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n-1,958\n0,441\n1,114\n\n\nEconômica Plus\n3,129\n-0,599\n-1,879\n\n\nExecutiva\n-0,211\n-0,225\n0,184"
+    "section": "",
+    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n-1,958\n0,441\n1,114\n\n\nEconômica Plus\n3,129\n-0,599\n-1,879\n\n\nExecutiva\n-0,211\n-0,225\n0,184\n\n\n\n\n\n\nServiço de check-in X Tipo de Viagem\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nViagem a negócios\n2,286\n0,785\n-2,496\n\n\nViagem pessoal\n-2,286\n-0,785\n2,496\n\n\n\n\n\n\nServiço de check-in X Atraso de partida\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nCom atraso\n6,089\n-1,608\n-3,250\n\n\nSem atraso\n-6,089\n1,608\n3,250"
   },
   {
-    "objectID": "index.html#serviço-de-checkin-x-tipo-de-viagem",
-    "href": "index.html#serviço-de-checkin-x-tipo-de-viagem",
+    "objectID": "index.html#resultados",
+    "href": "index.html#resultados",
     "title": "Apresentação",
-    "section": "Serviço de checkin X Tipo de Viagem",
-    "text": "Serviço de checkin X Tipo de Viagem\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nViagem a negócios\n2,286\n0,785\n-2,496\n\n\nViagem pessoal\n-2,286\n-0,785\n2,496"
+    "section": "Resultados",
+    "text": "Resultados"
   },
   {
-    "objectID": "index.html#serviço-de-checkin-x-atraso-de-partida",
-    "href": "index.html#serviço-de-checkin-x-atraso-de-partida",
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
     "title": "Apresentação",
-    "section": "Serviço de checkin X Atraso de partida",
-    "text": "Serviço de checkin X Atraso de partida\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nCom atraso\n6,089\n-1,608\n-3,250\n\n\nSem atraso\n-6,089\n1,608\n3,250"
-  },
-  {
-    "objectID": "index.html#serviço-de-check-in-x-classe",
-    "href": "index.html#serviço-de-check-in-x-classe",
-    "title": "Apresentação",
-    "section": "Serviço de check-in X Classe",
-    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n12\n19,67\n33,33\n\n\nEconômica Plus\n4,43\n7,26\n12,31\n\n\nExecutiva\n19,57\n32,07\n54,36"
-  },
-  {
-    "objectID": "index.html#construção-da-tabela-final",
-    "href": "index.html#construção-da-tabela-final",
-    "title": "Apresentação",
-    "section": "Construção da tabela final",
-    "text": "Construção da tabela final"
+    "section": "",
+    "text": "Variáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
   }
 ]
