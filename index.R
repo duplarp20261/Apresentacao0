@@ -1,25 +1,14 @@
----
-title: "Apresentação"
-author: Ramon Dias & Pedro Lucas
-format: 
- revealjs:
-      css: custom_alpha.css
-      embed-resources: true
----
+# Bibliotecas necessárias ------------------------------------------------------
+# ------------------------------------------------------------------------------
+require(openxlsx)
+require(dplyr)
+require(gtsummary)
+require(gt)
+require(rstatix)
+# ------------------------------------------------------------------------------
 
-```{r include=FALSE}
-
-#--- Carregando pacotes ---#
-
-library(openxlsx)
-library(dplyr)
-library(gtsummary)
-library(gt)
-library(rstatix)
-library(litedown)
-
-#--- Tratamento dos dados ---#
-
+# Tratamento dos dados ---------------------------------------------------------
+# ------------------------------------------------------------------------------
 theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",")
 
 Dados = read.xlsx("DadosAviao.xlsx")
@@ -39,15 +28,22 @@ DadosQuali = DadosQuali %>%
                         " 500–1500 km" = "Entre 500 e 1500 Km",
                         " <500 km" = "Menor que 500 Km",
                         ">1500 km" = "Maior que 1500 Km"))
+# ------------------------------------------------------------------------------
 
-#--- Tabela inicial ---#
+# Primeiras tabelas ------------------------------------------------------------
+# ------------------------------------------------------------------------------
+tbl_summary(data = DadosQuali)
+
+tbl_summary(data = DadosQuali,
+            by = Checkin.service)
 
 tbl_summary(data = DadosQuali,
             by = Checkin.service,
             percent = "row")
+# ------------------------------------------------------------------------------
 
-#--- Verificação dos valores esperados ---#
-
+# Verificação de matrizes de valores esperados ---------------------------------
+# ------------------------------------------------------------------------------
 chisq.test(Dados$Genero,Dados$Checkin.service)$expected
 chisq.test(Dados$Cliente,Dados$Checkin.service)$expected
 chisq.test(Dados$Idade,Dados$Checkin.service)$expected
@@ -56,28 +52,34 @@ chisq.test(Dados$Classe,Dados$Checkin.service)$expected # 1
 chisq.test(Dados$Distancia,Dados$Checkin.service)$expected
 chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$expected
 chisq.test(Dados$Atraso_Chegada,Dados$Checkin.service)$expected
+# ------------------------------------------------------------------------------
 
-#--- Análise de resíduos ---#
+# Tabela de associação por coluna contendo valor p dos testes ------------------
+# ------------------------------------------------------------------------------
+tbl_summary(data = DadosQuali,
+            by = Checkin.service,
+            percent = "row")%>%
+  add_p()
+# ------------------------------------------------------------------------------
 
-chisq.test(Dados$Classe,Dados$Checkin.service)$stdres 
-chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$stdres 
+# Fazendo análise de resíduos --------------------------------------------------
+# ------------------------------------------------------------------------------
+chisq.test(Dados$Classe,Dados$Checkin.service)$stdres # 2
+chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$stdres # 1
 chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$stdres
+# ------------------------------------------------------------------------------
 
-#--- Função de Crammer ---#
-
+# Função que calcula o coeficiente de Cramer -----------------------------------
+# ------------------------------------------------------------------------------
 cramer_fun <- function(data, variable, by, ...) {
   tab <- table(data[[variable]], data[[by]])
   v <- cramer_v(tab)
   tibble::tibble(`**Cramér**` = round(v, 3))
 }
+# ------------------------------------------------------------------------------
 
-```
-
-## Resultados {.center style="text-align: center;"}
-
-## {.scrollable}
-
-```{r}
+# Código da tabela final -------------------------------------------------------
+# ------------------------------------------------------------------------------
 tbl_summary(data = DadosQuali,
             by = Checkin.service,
             percent = "row",
@@ -126,15 +128,4 @@ tbl_summary(data = DadosQuali,
     heading.title.font.size = "26px",
     column_labels.font.size = "22px"
   )
-```
-
-## Tabela dos p-valores {.center style="text-align: center;"}
-
-## {.scrollable}
-
-```{r}
-tbl_summary(data = DadosQuali,
-            by = Checkin.service,
-            percent = "row")%>%
-  add_p()
-```
+# ------------------------------------------------------------------------------
