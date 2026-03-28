@@ -34,6 +34,9 @@
   color: #336699;
 }
 
+.spacer {
+  height: 60px;
+}
 
 /* ===== Slide de título ===== */
 .reveal .title-slide {

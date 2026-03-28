@@ -25,14 +25,14 @@
     "href": "index.html#section",
     "title": "Apresentação",
     "section": "",
-    "text": "Variáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
+    "text": "Características\nInsatisfeito\nN = 361\nNeutro\nN = 591\nSatisfeito\nN = 1001\nValor-p2\n\n\n\n\nGenero\n\n\n\n\n\n\n0,8\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\nCliente\n\n\n\n\n\n\n0,7\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\nIdade\n\n\n\n\n\n\n0,7\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\nTipo_Viagem\n\n\n\n\n\n\n0,021\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\nClasse\n\n\n\n\n\n\n0,038\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\nDistancia\n\n\n\n\n\n\n0,6\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\nAtraso_Partida\n\n\n\n\n\n\n&lt;0,001\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\nAtraso_Chegada\n\n\n\n\n\n\n0,3\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)\n\n\n\n\n\n1 n (%)\n\n\n2 Teste qui-quadrado de independência; Teste exato de Fisher"
   },
   {
     "objectID": "index.html#section-1",
     "href": "index.html#section-1",
     "title": "Apresentação",
     "section": "",
-    "text": "Características\nInsatisfeito\nN = 361\nNeutro\nN = 591\nSatisfeito\nN = 1001\nValor-p2\n\n\n\n\nGenero\n\n\n\n\n\n\n0,8\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\nCliente\n\n\n\n\n\n\n0,7\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\nIdade\n\n\n\n\n\n\n0,7\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\nTipo_Viagem\n\n\n\n\n\n\n0,021\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\nClasse\n\n\n\n\n\n\n0,038\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\nDistancia\n\n\n\n\n\n\n0,6\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\nAtraso_Partida\n\n\n\n\n\n\n&lt;0,001\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\nAtraso_Chegada\n\n\n\n\n\n\n0,3\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)\n\n\n\n\n\n1 n (%)\n\n\n2 Teste qui-quadrado de independência; Teste exato de Fisher"
+    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n-1,958\n0,441\n1,114\n\n\nEconômica Plus\n3,129\n-0,599\n-1,879\n\n\nExecutiva\n-0,211\n-0,225\n0,184\n\n\n\n\n\n\nServiço de check-in X Tipo de Viagem\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nViagem a negócios\n2,286\n0,785\n-2,496\n\n\nViagem pessoal\n-2,286\n-0,785\n2,496\n\n\n\n\n\n\nServiço de check-in X Atraso de partida\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nCom atraso\n6,089\n-1,608\n-3,250\n\n\nSem atraso\n-6,089\n1,608\n3,250"
   },
   {
     "objectID": "index.html#metodologia-estatística",
@@ -187,5 +187,68 @@
     "title": "Apresentação",
     "section": "Tabela dos p-valores",
     "text": "Tabela dos p-valores"
+  },
+  {
+    "objectID": "index.html#verificação-dos-valores-esperados",
+    "href": "index.html#verificação-dos-valores-esperados",
+    "title": "Apresentação",
+    "section": "Verificação dos valores esperados",
+    "text": "Verificação dos valores esperados"
+  },
+  {
+    "objectID": "index.html#section-2",
+    "href": "index.html#section-2",
+    "title": "Apresentação",
+    "section": "",
+    "text": "Variáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
+  },
+  {
+    "objectID": "index.html#serviço-de-checkin-x-classe",
+    "href": "index.html#serviço-de-checkin-x-classe",
+    "title": "Apresentação",
+    "section": "Serviço de checkin X Classe",
+    "text": "Serviço de checkin X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n12\n19,67\n33,33\n\n\nEconômica Plus\n4,43\n7,26\n12,31\n\n\nExecutiva\n19,57\n32,07\n54,36"
+  },
+  {
+    "objectID": "index.html#análise-de-resíduos",
+    "href": "index.html#análise-de-resíduos",
+    "title": "Apresentação",
+    "section": "Análise de resíduos",
+    "text": "Análise de resíduos"
+  },
+  {
+    "objectID": "index.html#serviço-de-checkin-x-classe-1",
+    "href": "index.html#serviço-de-checkin-x-classe-1",
+    "title": "Apresentação",
+    "section": "Serviço de checkin X Classe",
+    "text": "Serviço de checkin X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n-1,958\n0,441\n1,114\n\n\nEconômica Plus\n3,129\n-0,599\n-1,879\n\n\nExecutiva\n-0,211\n-0,225\n0,184"
+  },
+  {
+    "objectID": "index.html#serviço-de-checkin-x-tipo-de-viagem",
+    "href": "index.html#serviço-de-checkin-x-tipo-de-viagem",
+    "title": "Apresentação",
+    "section": "Serviço de checkin X Tipo de Viagem",
+    "text": "Serviço de checkin X Tipo de Viagem\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nViagem a negócios\n2,286\n0,785\n-2,496\n\n\nViagem pessoal\n-2,286\n-0,785\n2,496"
+  },
+  {
+    "objectID": "index.html#serviço-de-checkin-x-atraso-de-partida",
+    "href": "index.html#serviço-de-checkin-x-atraso-de-partida",
+    "title": "Apresentação",
+    "section": "Serviço de checkin X Atraso de partida",
+    "text": "Serviço de checkin X Atraso de partida\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nCom atraso\n6,089\n-1,608\n-3,250\n\n\nSem atraso\n-6,089\n1,608\n3,250"
+  },
+  {
+    "objectID": "index.html#serviço-de-check-in-x-classe",
+    "href": "index.html#serviço-de-check-in-x-classe",
+    "title": "Apresentação",
+    "section": "Serviço de check-in X Classe",
+    "text": "Serviço de check-in X Classe\n\n\n\n\nInsatisfeito\nNeutro\nSatisfeito\n\n\n\n\nEconômica\n12\n19,67\n33,33\n\n\nEconômica Plus\n4,43\n7,26\n12,31\n\n\nExecutiva\n19,57\n32,07\n54,36"
+  },
+  {
+    "objectID": "index.html#construção-da-tabela-final",
+    "href": "index.html#construção-da-tabela-final",
+    "title": "Apresentação",
+    "section": "Construção da tabela final",
+    "text": "Construção da tabela final"
   }
 ]

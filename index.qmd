@@ -73,6 +73,63 @@ cramer_fun <- function(data, variable, by, ...) {
 
 ```
 
+## Construção da tabela final {.center style="text-align: center;"}
+
+## Verificação dos valores esperados {.center style="text-align: center;"}
+
+## Serviço de check-in X Classe
+
+|                | Insatisfeito | Neutro | Satisfeito |
+|:--------------:|:------------:|:------:|:----------:|
+|    Econômica   |      12      |  19,67 |    33,33   |
+| Econômica Plus |     4,43     |  7,26  |    12,31   |
+|    Executiva   |     19,57    |  32,07 |    54,36   |
+
+## Tabela dos p-valores {.center style="text-align: center;"}
+
+## {.scrollable}
+
+```{r}
+tbl_summary(data = DadosQuali,
+            by = Checkin.service,
+            percent = "row")%>%
+  add_p()
+```
+
+## Análise de resíduos {.center style="text-align: center;"}
+
+## {.scrollable}
+
+### Serviço de check-in X Classe
+
+|                | Insatisfeito | Neutro | Satisfeito |
+|:--------------:|:------------:|:------:|:----------:|
+|    Econômica   |    -1,958    |  0,441 |    1,114   |
+| Econômica Plus |     3,129    | -0,599 |   -1,879   |
+|    Executiva   |    -0,211    | -0,225 |    0,184   |
+
+
+::: {.spacer}
+:::
+  
+### Serviço de check-in X Tipo de Viagem
+
+|                   | Insatisfeito |  Neutro | Satisfeito |
+|:-----------------:|:------------:|:-------:|:----------:|
+| Viagem a negócios |     2,286    |   0,785 |   -2,496   |
+|   Viagem pessoal  |    -2,286    |  -0,785 |    2,496   |
+
+
+::: {.spacer}
+:::
+  
+### Serviço de check-in X Atraso de partida
+
+|            | Insatisfeito | Neutro | Satisfeito |
+|:----------:|:------------:|:------:|:----------:|
+| Com atraso |     6,089    | -1,608 |   -3,250   |
+| Sem atraso |    -6,089    |  1,608 |    3,250   |
+
 ## Resultados {.center style="text-align: center;"}
 
 ## {.scrollable}
@@ -126,15 +183,4 @@ tbl_summary(data = DadosQuali,
     heading.title.font.size = "26px",
     column_labels.font.size = "22px"
   )
-```
-
-## Tabela dos p-valores {.center style="text-align: center;"}
-
-## {.scrollable}
-
-```{r}
-tbl_summary(data = DadosQuali,
-            by = Checkin.service,
-            percent = "row")%>%
-  add_p()
 ```
