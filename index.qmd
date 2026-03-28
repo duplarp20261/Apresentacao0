@@ -86,7 +86,7 @@ cramer_fun <- function(data, variable, by, ...) {
 |    Executiva   |     19,57    |  32,07 |    54,36   |
 
 ## Tabela dos p-valores {.center style="text-align: center;"}
-
+ 
 ## {.scrollable}
 
 ```{r}
