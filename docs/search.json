@@ -219,7 +219,7 @@
   {
     "objectID": "index.html#resultados",
     "href": "index.html#resultados",
-    "title": "Apresentação",
+    "title": "Projeto 1",
     "section": "Resultados",
     "text": "Resultados"
   },
@@ -229,5 +229,54 @@
     "title": "Apresentação",
     "section": "",
     "text": "Variáveis\n\nSatisfação com o Serviço de Checkin\n\nValor-p\nCramér\n\n\nInsatisfeito36 (18%)\nNeutro59 (30%)\nSatisfeito100 (51%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n0,812\n0,046\n\n\n    Feminino\n18 (18%)\n32 (32%)\n49 (49%)\n\n\n\n\n\n\n    Masculino\n18 (19%)\n27 (28%)\n51 (53%)\n\n\n\n\n\n\nTipo de ClienteQ\n\n\n\n\n\n\n0,657\n0,066\n\n\n    Cliente Fiel\n32 (19%)\n51 (31%)\n83 (50%)\n\n\n\n\n\n\n    Cliente Nao Fiel\n4 (14%)\n8 (28%)\n17 (59%)\n\n\n\n\n\n\nIdadeQ\n\n\n\n\n\n\n0,664\n0,078\n\n\n    Entre 30 e 50\n16 (19%)\n27 (32%)\n42 (49%)\n\n\n\n\n\n\n    Maior que 50 anos\n10 (19%)\n19 (35%)\n25 (46%)\n\n\n\n\n\n\n    Menor que 30 anos\n10 (18%)\n13 (23%)\n33 (59%)\n\n\n\n\n\n\nTipo de ViagemQ\n\n\n\n\n\n\n0,021\n0,199\n\n\n    Viagem a Negocios\n30 (23%)\n42 (32%)\n59 (45%)\n\n\n\n\n\n\n    Viagem Pessoal\n6 (9,4%)\n17 (27%)\n41 (64%)\n\n\n\n\n\n\nClasseF\n\n\n\n\n\n\n0,038\n0,170\n\n\n    Economica\n7 (11%)\n21 (32%)\n37 (57%)\n\n\n\n\n\n\n    Economica Plus\n10 (42%)\n6 (25%)\n8 (33%)\n\n\n\n\n\n\n    Executiva\n19 (18%)\n32 (30%)\n55 (52%)\n\n\n\n\n\n\nDistânciaQ\n\n\n\n\n\n\n0,578\n0,086\n\n\n    Entre 500 e 1500 Km\n16 (19%)\n21 (25%)\n46 (55%)\n\n\n\n\n\n\n    Maior que 1500 Km\n12 (16%)\n28 (36%)\n37 (48%)\n\n\n\n\n\n\n    Menor que 500 Km\n8 (23%)\n10 (29%)\n17 (49%)\n\n\n\n\n\n\nAtraso na PartidaQ\n\n\n\n\n\n\n&lt;0,001\n0,437\n\n\n    Com atraso\n25 (45%)\n12 (22%)\n18 (33%)\n\n\n\n\n\n\n    Sem atraso\n11 (7,9%)\n47 (34%)\n82 (59%)\n\n\n\n\n\n\nAtraso na ChegadaQ\n\n\n\n\n\n\n0,259\n0,118\n\n\n    Com atraso\n12 (27%)\n13 (29%)\n20 (44%)\n\n\n\n\n\n\n    Sem atraso\n24 (16%)\n46 (31%)\n80 (53%)"
+  },
+  {
+    "objectID": "index.html#introdução",
+    "href": "index.html#introdução",
+    "title": "Projeto 1",
+    "section": "Introdução",
+    "text": "Introdução\n\nO estudo busca analisar os impactos da pandemia do COVID-19 nos aspectos sociais, econômicos e comportamentais da população.\n\nDentre os temas abordados, se destaca as possíveis mudanças nos hábitos alimentares da população durante a pandemia.\n\nDentre os aspectos estudados, essa apresentação trabalha na categoria pães, torradas e biscoitos, com o objetivo de avaliar a existência de associação entre o consumo desses alimentos e fatores sociais, econômicos e comportamentais durante a pandemia."
+  },
+  {
+    "objectID": "index.html#metodologia",
+    "href": "index.html#metodologia",
+    "title": "Projeto 1",
+    "section": "Metodologia",
+    "text": "Metodologia\n\nQuestionário online aplicado em 2022\n\\(n=2310\\)"
+  },
+  {
+    "objectID": "index.html#dados-qualitativos",
+    "href": "index.html#dados-qualitativos",
+    "title": "Projeto 1",
+    "section": "Dados Qualitativos",
+    "text": "Dados Qualitativos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\nAumentou\nN = 1,0051\nDiminuiu\nN = 3011\nNão alterou\nN = 9581\nNão consumo\nN = 461\n\n\n\n\nGênero\n\n\n\n\n\n\n\n\n\n\n    Feminino\n787 (45%)\n239 (14%)\n674 (39%)\n35 (2.0%)\n\n\n    Masculino\n218 (38%)\n62 (11%)\n284 (49%)\n11 (1.9%)\n\n\nRaça/cor\n\n\n\n\n\n\n\n\n\n\n    Branca\n630 (43%)\n168 (12%)\n621 (43%)\n37 (2.5%)\n\n\n    Outros\n24 (55%)\n9 (20%)\n10 (23%)\n1 (2.3%)\n\n\n    Parda\n276 (43%)\n95 (15%)\n260 (41%)\n7 (1.1%)\n\n\n    Preta\n75 (44%)\n29 (17%)\n67 (39%)\n1 (0.6%)\n\n\nRegião de residência\n\n\n\n\n\n\n\n\n\n\n    Centro-oeste\n84 (39%)\n20 (9.2%)\n107 (49%)\n6 (2.8%)\n\n\n    Nordeste\n142 (48%)\n37 (12%)\n112 (38%)\n6 (2.0%)\n\n\n    Norte\n165 (48%)\n49 (14%)\n127 (37%)\n3 (0.9%)\n\n\n    Sudeste\n400 (42%)\n125 (13%)\n419 (44%)\n18 (1.9%)\n\n\n    Sul\n214 (44%)\n70 (14%)\n193 (39%)\n13 (2.7%)\n\n\nIsolamento social\n\n\n\n\n\n\n\n\n\n\n    Não\n407 (40%)\n119 (12%)\n469 (46%)\n20 (2.0%)\n\n\n    Sim\n598 (46%)\n182 (14%)\n489 (38%)\n26 (2.0%)\n\n\nSituação de trabalho\n\n\n\n\n\n\n\n\n\n\n    Não\n308 (44%)\n103 (15%)\n272 (39%)\n16 (2.3%)\n\n\n    Sim\n697 (43%)\n198 (12%)\n686 (43%)\n30 (1.9%)\n\n\nProfissional da saúde\n\n\n\n\n\n\n\n\n\n\n    Não\n792 (45%)\n231 (13%)\n713 (40%)\n35 (2.0%)\n\n\n    Sim\n213 (40%)\n70 (13%)\n245 (45%)\n11 (2.0%)\n\n\nFaixa de renda familiar\n\n\n\n\n\n\n\n\n\n\n    até R$ 1254,00\n123 (45%)\n51 (19%)\n92 (33%)\n9 (3.3%)\n\n\n    entre R$ 1.255 - R$ 8.640\n609 (46%)\n157 (12%)\n538 (41%)\n22 (1.7%)\n\n\n    mais de R$ 8.640\n273 (39%)\n93 (13%)\n328 (46%)\n15 (2.1%)\n\n\nEscolaridade\n\n\n\n\n\n\n\n\n\n\n    Ensino Fundamental ou menos\n26 (62%)\n5 (12%)\n10 (24%)\n1 (2.4%)\n\n\n    Ensino Médio Completo\n404 (45%)\n125 (14%)\n352 (39%)\n19 (2.1%)\n\n\n    Ensino Superior Completo\n186 (46%)\n49 (12%)\n161 (40%)\n6 (1.5%)\n\n\n    Pós-graduação\n389 (40%)\n122 (13%)\n435 (45%)\n20 (2.1%)\n\n\nDiagnóstico de COVID-19\n\n\n\n\n\n\n\n\n\n\n    Não\n726 (43%)\n240 (14%)\n696 (41%)\n31 (1.8%)\n\n\n    Sim\n279 (45%)\n61 (9.9%)\n262 (42%)\n15 (2.4%)\n\n\nConsulta com nutricionista\n\n\n\n\n\n\n\n\n\n\n    Não\n862 (46%)\n221 (12%)\n769 (41%)\n24 (1.3%)\n\n\n    Sim\n143 (33%)\n80 (18%)\n189 (44%)\n22 (5.1%)\n\n\nDificuldade financeira\n\n\n\n\n\n\n\n\n\n\n    Não\n774 (41%)\n228 (12%)\n849 (45%)\n36 (1.9%)\n\n\n    Sim\n231 (55%)\n73 (17%)\n109 (26%)\n10 (2.4%)\n\n\nDificuldade ao acesso de alimentos\n\n\n\n\n\n\n\n\n\n\n    Não\n790 (41%)\n229 (12%)\n852 (45%)\n38 (2.0%)\n\n\n    Sim\n215 (54%)\n72 (18%)\n106 (26%)\n8 (2.0%)\n\n\nMudança no tempo de preparo das refeições\n\n\n\n\n\n\n\n\n\n\n    Aumentou\n547 (47%)\n172 (15%)\n428 (37%)\n24 (2.0%)\n\n\n    Diminuiu\n176 (59%)\n40 (13%)\n82 (27%)\n1 (0.3%)\n\n\n    Não alterou\n282 (34%)\n89 (11%)\n448 (53%)\n21 (2.5%)\n\n\nHábito de fumar cigarro\n\n\n\n\n\n\n\n\n\n\n    Não\n960 (44%)\n287 (13%)\n911 (41%)\n42 (1.9%)\n\n\n    Sim\n45 (41%)\n14 (13%)\n47 (43%)\n4 (3.6%)\n\n\nAtividade física\n\n\n\n\n\n\n\n\n\n\n    Aumentou\n231 (36%)\n115 (18%)\n278 (43%)\n20 (3.1%)\n\n\n    Diminuiu\n518 (50%)\n100 (9.7%)\n402 (39%)\n15 (1.4%)\n\n\n    Não alterou\n112 (35%)\n36 (11%)\n162 (51%)\n9 (2.8%)\n\n\n    Não tenho o hábito\n144 (46%)\n50 (16%)\n116 (37%)\n2 (0.6%)\n\n\n\n1 n (%)"
+  },
+  {
+    "objectID": "index.html#dados-quantitativos",
+    "href": "index.html#dados-quantitativos",
+    "title": "Projeto 1",
+    "section": "Dados Quantitativos",
+    "text": "Dados Quantitativos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\nAumentou\nN = 1,0051\nDiminuiu\nN = 3011\nNão alterou\nN = 9581\nNão consumo\nN = 461\n\n\n\n\nIdade\n32 (12)\n34 (14)\n34 (13)\n34 (12)\n\n\nAltura\n1.65 (0.08)\n1.65 (0.09)\n1.66 (0.09)\n1.67 (0.09)\n\n\nPeso\n70 (16)\n68 (15)\n69 (16)\n69 (15)\n\n\nIMC\n25.8 (5.1)\n25.1 (4.9)\n25.0 (5.0)\n24.4 (4.3)\n\n\n\n1 Mean (SD)"
+  },
+  {
+    "objectID": "index.html#variáveis-qualitativas",
+    "href": "index.html#variáveis-qualitativas",
+    "title": "Projeto 1",
+    "section": "Variáveis Qualitativas",
+    "text": "Variáveis Qualitativas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\n\nMudança no consumo de pães, torradas e biscoitos\n\np-value\nCramér\n\n\nAumentou1005 (44%)\nDiminuiu301 (13%)\nNão alterou958 (41%)\nNão consumo46 (2.0%)\n\n\n\n\nGêneroQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.093\n\n\n    Feminino\n787 (45%)\n239 (14%)\n674 (39%)\n35 (2.0%)\n\n\n\n\n\n\n    Masculino\n218 (38%)\n62 (11%)\n284 (49%)\n11 (1.9%)\n\n\n\n\n\n\nRaça/corF\n\n\n\n\n\n\n\n\n0.010\n0.054\n\n\n    Branca\n630 (43%)\n168 (12%)\n621 (43%)\n37 (2.5%)\n\n\n\n\n\n\n    Outros\n24 (55%)\n9 (20%)\n10 (23%)\n1 (2.3%)\n\n\n\n\n\n\n    Parda\n276 (43%)\n95 (15%)\n260 (41%)\n7 (1.1%)\n\n\n\n\n\n\n    Preta\n75 (44%)\n29 (17%)\n67 (39%)\n1 (0.6%)\n\n\n\n\n\n\nRegião de residênciaF\n\n\n\n\n\n\n\n\n0.064\n0.053\n\n\n    Centro-oeste\n84 (39%)\n20 (9.2%)\n107 (49%)\n6 (2.8%)\n\n\n\n\n\n\n    Nordeste\n142 (48%)\n37 (12%)\n112 (38%)\n6 (2.0%)\n\n\n\n\n\n\n    Norte\n165 (48%)\n49 (14%)\n127 (37%)\n3 (0.9%)\n\n\n\n\n\n\n    Sudeste\n400 (42%)\n125 (13%)\n419 (44%)\n18 (1.9%)\n\n\n\n\n\n\n    Sul\n214 (44%)\n70 (14%)\n193 (39%)\n13 (2.7%)\n\n\n\n\n\n\nIsolamento socialQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.086\n\n\n    Não\n407 (40%)\n119 (12%)\n469 (46%)\n20 (2.0%)\n\n\n\n\n\n\n    Sim\n598 (46%)\n182 (14%)\n489 (38%)\n26 (2.0%)\n\n\n\n\n\n\nSituação de trabalhoQ\n\n\n\n\n\n\n\n\n0.227\n0.043\n\n\n    Não\n308 (44%)\n103 (15%)\n272 (39%)\n16 (2.3%)\n\n\n\n\n\n\n    Sim\n697 (43%)\n198 (12%)\n686 (43%)\n30 (1.9%)\n\n\n\n\n\n\nProfissional da saúdeQ\n\n\n\n\n\n\n\n\n0.153\n0.048\n\n\n    Não\n792 (45%)\n231 (13%)\n713 (40%)\n35 (2.0%)\n\n\n\n\n\n\n    Sim\n213 (40%)\n70 (13%)\n245 (45%)\n11 (2.0%)\n\n\n\n\n\n\nFaixa de renda familiarQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.074\n\n\n    até R$ 1254,00\n123 (45%)\n51 (19%)\n92 (33%)\n9 (3.3%)\n\n\n\n\n\n\n    entre R$ 1.255 - R$ 8.640\n609 (46%)\n157 (12%)\n538 (41%)\n22 (1.7%)\n\n\n\n\n\n\n    mais de R$ 8.640\n273 (39%)\n93 (13%)\n328 (46%)\n15 (2.1%)\n\n\n\n\n\n\nNível de escolaridadeF\n\n\n\n\n\n\n\n\n0.058\n0.048\n\n\n    Ensino Fundamental ou menos\n26 (62%)\n5 (12%)\n10 (24%)\n1 (2.4%)\n\n\n\n\n\n\n    Ensino Médio Completo\n404 (45%)\n125 (14%)\n352 (39%)\n19 (2.1%)\n\n\n\n\n\n\n    Ensino Superior Completo\n186 (46%)\n49 (12%)\n161 (40%)\n6 (1.5%)\n\n\n\n\n\n\n    Pós-graduação\n389 (40%)\n122 (13%)\n435 (45%)\n20 (2.1%)\n\n\n\n\n\n\nDiagnóstico de COVID-19Q\n\n\n\n\n\n\n\n\n0.047\n0.059\n\n\n    Não\n726 (43%)\n240 (14%)\n696 (41%)\n31 (1.8%)\n\n\n\n\n\n\n    Sim\n279 (45%)\n61 (9.9%)\n262 (42%)\n15 (2.4%)\n\n\n\n\n\n\nConsulta com nutricionistaQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.150\n\n\n    Não\n862 (46%)\n221 (12%)\n769 (41%)\n24 (1.3%)\n\n\n\n\n\n\n    Sim\n143 (33%)\n80 (18%)\n189 (44%)\n22 (5.1%)\n\n\n\n\n\n\nDificuldade financeiraQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.151\n\n\n    Não\n774 (41%)\n228 (12%)\n849 (45%)\n36 (1.9%)\n\n\n\n\n\n\n    Sim\n231 (55%)\n73 (17%)\n109 (26%)\n10 (2.4%)\n\n\n\n\n\n\nDificuldade ao acesso de alimentosQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.142\n\n\n    Não\n790 (41%)\n229 (12%)\n852 (45%)\n38 (2.0%)\n\n\n\n\n\n\n    Sim\n215 (54%)\n72 (18%)\n106 (26%)\n8 (2.0%)\n\n\n\n\n\n\nTempo de preparo das refeiçõesQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.146\n\n\n    Aumentou\n547 (47%)\n172 (15%)\n428 (37%)\n24 (2.0%)\n\n\n\n\n\n\n    Diminuiu\n176 (59%)\n40 (13%)\n82 (27%)\n1 (0.3%)\n\n\n\n\n\n\n    Não alterou\n282 (34%)\n89 (11%)\n448 (53%)\n21 (2.5%)\n\n\n\n\n\n\nHábito de fumar cigarroF\n\n\n\n\n\n\n\n\n0.557\n0.028\n\n\n    Não\n960 (44%)\n287 (13%)\n911 (41%)\n42 (1.9%)\n\n\n\n\n\n\n    Sim\n45 (41%)\n14 (13%)\n47 (43%)\n4 (3.6%)\n\n\n\n\n\n\nAtividade físicaQ\n\n\n\n\n\n\n\n\n&lt;0.001\n0.099\n\n\n    Aumentou\n231 (36%)\n115 (18%)\n278 (43%)\n20 (3.1%)\n\n\n\n\n\n\n    Diminuiu\n518 (50%)\n100 (9.7%)\n402 (39%)\n15 (1.4%)\n\n\n\n\n\n\n    Não alterou\n112 (35%)\n36 (11%)\n162 (51%)\n9 (2.8%)\n\n\n\n\n\n\n    Não tenho o hábito\n144 (46%)\n50 (16%)\n116 (37%)\n2 (0.6%)"
+  },
+  {
+    "objectID": "index.html#variáveis-quantitativas",
+    "href": "index.html#variáveis-quantitativas",
+    "title": "Projeto 1",
+    "section": "Variáveis Quantitativas",
+    "text": "Variáveis Quantitativas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariáveis\n\nConsumo de Pães, torradas e biscoitos\n\np-value\nComparações Múltiplas\n\n\nAumentou1005 (44%)\nDiminuiu301 (13%)\nNão alterou958 (41%)\nNão consumo46 (2.0%)\n\n\n\n\nIdadeW\n32 (12)\n34 (14)\n34 (13)\n34 (12)\n0.002\nAumentou = aDiminuiu = abNão alterou = bNão consumo = ab\n\n\nAlturaA\n1.65 (0.08)\n1.65 (0.09)\n1.66 (0.09)\n1.67 (0.09)\n0.003\nAumentou = bDiminuiu = bNão alterou = aNão consumo = ab\n\n\nPesoA\n70 (16)\n68 (15)\n69 (16)\n69 (15)\n0.173\nAumentou = aDiminuiu = aNão alterou = aNão consumo = a\n\n\nIMCA\n25.8 (5.1)\n25.1 (4.9)\n25.0 (5.0)\n24.4 (4.3)\n0.003\nAumentou = aDiminuiu = abNão alterou = bNão consumo = ab"
+  },
+  {
+    "objectID": "index.html#núvem-de-palavras",
+    "href": "index.html#núvem-de-palavras",
+    "title": "Projeto 1",
+    "section": "Núvem de palavras",
+    "text": "Núvem de palavras"
   }
 ]
