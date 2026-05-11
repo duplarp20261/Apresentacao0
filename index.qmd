@@ -1,180 +1,264 @@
 ---
-title: "Apresentação"
-author: Ramon Dias & Pedro Lucas
-format: 
- revealjs:
-      css: custom_alpha.css
-      embed-resources: true
+title: "Projeto 1"
+author: 'Ramon Dias'
+format: revealjs
+editor: source
 ---
 
-```{r include=FALSE}
+```{r, warning=FALSE, echo=FALSE, include=FALSE}
+#-----Pacotes-----
 
-#--- Carregando pacotes ---#
-
+library(tidyverse)
+library(readxl)
 library(openxlsx)
-library(dplyr)
 library(gtsummary)
 library(gt)
 library(rstatix)
-library(litedown)
+library(qqplotr)
+library(DescTools)
+library(tidytext)
+library(ggwordcloud)
+library(pals)
 
-#--- Tratamento dos dados ---#
+#-----Importando a base-----
 
-theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",")
+base=read_xlsx('Nutricao.xlsx')
 
-Dados = read.xlsx("DadosAviao.xlsx")
+base=base |> 
+  select(-c(Delivery,
+            Leites_Derivados,
+            Ovos_Carnes,
+            Doces,
+            Bebidas_Alcoolicas,
+            Refrigerante,
+            Embutidos))
 
-DadosQuali = Dados %>% select(Checkin.service, Genero, Cliente, Idade,
-                              Tipo_Viagem, Classe, Distancia,
-                              Atraso_Partida, Atraso_Chegada)
+glimpse(base)
 
-DadosQuali = DadosQuali %>%
-  mutate(Idade = recode(Idade,
-                        "30–50 anos" = "Entre 30 e 50",
-                        "<30 anos" = "Menor que 30 anos",
-                        ">50 anos" = "Maior que 50 anos"))
+#-----Modificando a base-----
 
-DadosQuali = DadosQuali %>%
-  mutate(Distancia = recode(Distancia,
-                        " 500–1500 km" = "Entre 500 e 1500 Km",
-                        " <500 km" = "Menor que 500 Km",
-                        ">1500 km" = "Maior que 1500 Km"))
+dados_quali=base |> 
+  select(-c(Idade,
+            Altura,
+            Peso,
+            IMC,
+            sentimentos_pandemia))
 
-#--- Tabela inicial ---#
+lapply(dados_quali, table)
 
-tbl_summary(data = DadosQuali,
-            by = Checkin.service,
-            percent = "row")
+base=base |> 
+  mutate(Raca_cor=case_when(Raca_cor %in% c('Amarela',
+                                            'Indígena',
+                                            'Outro') ~ 'Outros',
+                            TRUE ~ Raca_cor),
+         Escolaridade=case_when(Escolaridade %in% c('Analfabeto',
+                                                    'Ensino Fundamental Completo') ~ 'Ensino Fundamental ou menos',
+                                TRUE ~ Escolaridade))
 
-#--- Verificação dos valores esperados ---#
+#-----Verificando as associações(quali)-----
 
-chisq.test(Dados$Genero,Dados$Checkin.service)$expected
-chisq.test(Dados$Cliente,Dados$Checkin.service)$expected
-chisq.test(Dados$Idade,Dados$Checkin.service)$expected
-chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$expected
-chisq.test(Dados$Classe,Dados$Checkin.service)$expected # 1
-chisq.test(Dados$Distancia,Dados$Checkin.service)$expected
-chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$expected
-chisq.test(Dados$Atraso_Chegada,Dados$Checkin.service)$expected
+dados_quali=base |> 
+  select(-c(Idade,
+            Altura,
+            Peso,
+            IMC,
+            sentimentos_pandemia))
 
-#--- Análise de resíduos ---#
+lapply(dados_quali, table)
 
-chisq.test(Dados$Classe,Dados$Checkin.service)$stdres 
-chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$stdres 
-chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$stdres
+#---#---#
 
-#--- Função de Crammer ---#
+resultado=lapply(
+  names(dados_quali),
+  function(v){
+    if(v != "Paes_Torradas_Biscoitos"){
+      chisq.test(
+        table(
+          dados_quali[[v]],
+          dados_quali$Paes_Torradas_Biscoitos
+        )
+      )
+    }
+  }
+)
 
+lapply(resultado, function(x) x$expected)
+# Raca_cor --> 2x<5
+# Regiao --> 1x<5
+# Escolaridade --> 1x<5
+# Cigarro --> 1x<5
+
+#---#---#
+
+tbl_summary(
+  data = dados_quali,
+  by = Paes_Torradas_Biscoitos,
+  percent = "row"
+) |>
+  add_p(
+    test = list(
+      Escolaridade ~ "fisher.test",
+      Raca_cor ~ "fisher.test",
+      Regiao ~ "fisher.test",
+      cigarro ~ "fisher.test"
+    ),
+    test.args = list(
+      Escolaridade ~ list(simulate.p.value = TRUE, B=10000),
+      Raca_cor ~ list(simulate.p.value = TRUE),
+      Regiao ~ list(simulate.p.value = TRUE, B=10000),
+      cigarro ~ list(simulate.p.value = TRUE)
+    )
+  )
+
+chisq.test(base$Genero,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Raca_cor,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Isolamento,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Renda_familiar,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Covid,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Consulta_Nutricionista,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Dificuldade_Financeira,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Acesso_Alimento,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Tempo_Preparo_Refeicao,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$atividade_fisica_pandemia,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Profissional_Saude,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Trabalha,base$Paes_Torradas_Biscoitos)$stdres
+
+chisq.test(base$Escolaridade,base$Paes_Torradas_Biscoitos)$stdres
+
+
+#----- Criando a tabela final(quali) -----
+
+# Função que calcula o coeficiente de Cramer
 cramer_fun <- function(data, variable, by, ...) {
   tab <- table(data[[variable]], data[[by]])
   v <- cramer_v(tab)
   tibble::tibble(`**Cramér**` = round(v, 3))
 }
 
-```
+#---#---#
 
-## Construção da tabela final {.center style="text-align: center;"}
-
-## Verificação dos valores esperados {.center style="text-align: center;"}
-
-## Serviço de check-in X Classe
-
-|                | Insatisfeito | Neutro | Satisfeito |
-|:--------------:|:------------:|:------:|:----------:|
-|    Econômica   |      12      |  19,67 |    33,33   |
-| Econômica Plus |     4,43     |  7,26  |    12,31   |
-|    Executiva   |     19,57    |  32,07 |    54,36   |
-
-## Tabela dos p-valores {.center style="text-align: center;"}
- 
-## {.scrollable}
-
-```{r}
-tbl_summary(data = DadosQuali,
-            by = Checkin.service,
-            percent = "row")%>%
-  add_p()
-```
-
-## Análise de resíduos {.center style="text-align: center;"}
-
-## {.scrollable}
-
-### Serviço de check-in X Classe
-
-|                | Insatisfeito | Neutro | Satisfeito |
-|:--------------:|:------------:|:------:|:----------:|
-|    Econômica   |    -1,958    |  0,441 |    1,114   |
-| Econômica Plus |     3,129    | -0,599 |   -1,879   |
-|    Executiva   |    -0,211    | -0,225 |    0,184   |
-
-
-::: {.spacer}
-:::
-  
-### Serviço de check-in X Tipo de Viagem
-
-|                   | Insatisfeito |  Neutro | Satisfeito |
-|:-----------------:|:------------:|:-------:|:----------:|
-| Viagem a negócios |     2,286    |   0,785 |   -2,496   |
-|   Viagem pessoal  |    -2,286    |  -0,785 |    2,496   |
-
-
-::: {.spacer}
-:::
-  
-### Serviço de check-in X Atraso de partida
-
-|            | Insatisfeito | Neutro | Satisfeito |
-|:----------:|:------------:|:------:|:----------:|
-| Com atraso |     6,089    | -1,608 |   -3,250   |
-| Sem atraso |    -6,089    |  1,608 |    3,250   |
-
-## Resultados {.center style="text-align: center;"}
-
-## {.scrollable}
-
-```{r}
-tbl_summary(data = DadosQuali,
-            by = Checkin.service,
-            percent = "row",
-            label = list(
-              Genero ~ "Gênero<sup>Q</sup>",
-              Cliente ~ "Tipo de Cliente<sup>Q</sup>",
-              Idade ~ "Idade<sup>Q</sup>",
-              Tipo_Viagem ~"Tipo de Viagem<sup>Q</sup>",
-              Classe ~ "Classe<sup>F</sup>",
-              Distancia ~ "Distância<sup>Q</sup>",
-              Atraso_Partida ~"Atraso na Partida<sup>Q</sup>",
-              Atraso_Chegada ~"Atraso na Chegada<sup>Q</sup>"
-            )
+# Tabela Qualitativa
+tabela_quali=tbl_summary(data = dados_quali,
+                         by = Paes_Torradas_Biscoitos,
+                         percent = "row",
+                         label = list(
+                           Genero ~ "Gênero<sup>Q</sup>",
+                           Raca_cor ~ "Raça/cor<sup>F</sup>",
+                           Regiao ~ "Região de residência<sup>F</sup>",
+                           Isolamento ~ "Isolamento social<sup>Q</sup>",
+                           Trabalha ~ "Situação de trabalho<sup>Q</sup>",
+                           Profissional_Saude ~ "Profissional da saúde<sup>Q</sup>",
+                           Renda_familiar ~ "Faixa de renda familiar<sup>Q</sup>",
+                           Escolaridade ~ "Nível de escolaridade<sup>F</sup>",
+                           Covid ~ "Diagnóstico de COVID-19<sup>Q</sup>",
+                           Consulta_Nutricionista ~ "Consulta com nutricionista<sup>Q</sup>",
+                           Dificuldade_Financeira ~ "Dificuldade financeira<sup>Q</sup>",
+                           Acesso_Alimento ~ "Dificuldade ao acesso de alimentos<sup>Q</sup>",
+                           Tempo_Preparo_Refeicao ~ "Tempo de preparo das refeições<sup>Q</sup>",
+                           cigarro ~"Hábito de fumar cigarro<sup>F</sup>",
+                           atividade_fisica_pandemia ~"Atividade física<sup>Q</sup>"
+                           )
 )%>%
-  add_p(pvalue_fun = label_style_pvalue(digits = 3)) %>%
+  add_p(
+    test = list(
+      Escolaridade ~ "fisher.test",
+      Raca_cor ~ "fisher.test",
+      Regiao ~ "fisher.test"
+    ),
+    test.args = list(
+      Escolaridade ~ list(simulate.p.value = TRUE, B = 10000),
+      Raca_cor ~ list(simulate.p.value = TRUE, B = 10000),
+      Regiao ~ list(simulate.p.value = TRUE, B = 10000)
+    ),
+    pvalue_fun = label_style_pvalue(digits = 3)
+  ) %>%
   bold_p(t = 0.05) %>%
   add_stat(fns = everything() ~ cramer_fun)%>%
-  modify_spanning_header(all_stat_cols() ~ "**Satisfação com o Serviço de Checkin**") %>%
+  modify_spanning_header(all_stat_cols() ~ "**Mudança no consumo de pães, torradas e biscoitos**") %>%
   modify_header(label ~ "**Variáveis**") %>%
   bold_labels() %>%
   modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)")%>%
   modify_bold(
-    columns = stat_1,  # primeira coluna
-    rows = (variable == "Tipo_Viagem" & label == "Viagem a Negocios"| label=="Viagem Pessoal") | 
-      (variable == "Classe" & label == "Economica Plus") | 
-      (variable == "Atraso_Partida" & label == "Com atraso")
-  )%>%
-  modify_bold(
     columns = stat_1,
-    rows = (variable == "Atraso_Partida" & label == "Sem atraso")
+    rows =
+      (variable == "Genero" & label == "Feminino") |                                          
+      (variable == "Genero" & label == "Masculino") |                                          
+      (variable == "Isolamento" & label == "Não") |                                          
+      (variable == "Isolamento" & label == "Sim") |                                          
+      (variable == "Renda_familiar" & label == "entre R$ 1.255 - R$ 8.640") |                  
+      (variable == "Renda_familiar" & label == "mais de R$ 8.640") |                           
+      (variable == "Consulta_Nutricionista" & label == "Não") |                                         
+      (variable == "Consulta_Nutricionista" & label == "Sim") |                                         
+      (variable == "Dificuldade_Financeira" & label == "Não") |                                         
+      (variable == "Dificuldade_Financeira" & label == "Sim") |                                          
+      (variable == "Acesso_Alimento" & label == "Não") |                                          
+      (variable == "Acesso_Alimento" & label == "Sim") |                                        
+      (variable == "Tempo_Preparo_Refeicao" & label == "Aumentou") |                                   
+      (variable == "Tempo_Preparo_Refeicao" & label == "Diminuiu") |                                   
+      (variable == "Tempo_Preparo_Refeicao" & label == "Não alterou") |                                  
+      (variable == "atividade_fisica_pandemia" & label == "Aumentou") |                                  
+      (variable == "atividade_fisica_pandemia" & label == "Diminuiu") |                                  
+      (variable == "atividade_fisica_pandemia" & label == "Não alterou")
   ) %>%
   modify_bold(
-    columns = stat_3,  # terceira coluna
-    rows = (variable == "Tipo_Viagem" & label == "Viagem a Negocios"| label=="Viagem Pessoal") | 
-      (variable == "Atraso_Partida" & label == "Com atraso")
-    )%>%
+    columns = stat_2,
+    rows =
+      (variable == "Raca_cor" & label == "Branca") |                                      
+      (variable == "Renda_familiar" & label == "até R$ 1254,00") |                              
+      (variable == "Renda_familiar" & label == "entre R$ 1.255 - R$ 8.640") |                   
+      (variable == "Covid" & label == "Não") |                                          
+      (variable == "Covid" & label == "Sim") |                                        
+      (variable == "Consulta_Nutricionista" & label == "Não") |                                          
+      (variable == "Consulta_Nutricionista" & label == "Sim") |                                        
+      (variable == "Dificuldade_Financeira" & label == "Não") |                                        
+      (variable == "Dificuldade_Financeira" & label == "Sim") |                                         
+      (variable == "Acesso_Alimento" & label == "Não") |                                        
+      (variable == "Acesso_Alimento" & label == "Sim") |                                        
+      (variable == "Tempo_Preparo_Refeicao" & label == "Aumentou") |                                     
+      (variable == "Tempo_Preparo_Refeicao" & label == "Não alterou") |                                  
+      (variable == "atividade_fisica_pandemia" & label == "Aumentou") |                                   
+      (variable == "atividade_fisica_pandemia" & label == "Diminuiu") 
+  ) %>%
   modify_bold(
     columns = stat_3,
-    rows = (variable == "Atraso_Partida" & label == "Sem atraso")
+    rows =
+      (variable == "Genero" & label == "Feminino") |                                     
+      (variable == "Genero" & label == "Masculino") |                                   
+      (variable == "Raca_cor" & label == "Outros") |                                       
+      (variable == "Isolamento" & label == "Não") |                                          
+      (variable == "Isolamento" & label == "Sim") |                                         
+      (variable == "Renda_familiar" & label == "até R$ 1254,00") |                               
+      (variable == "Renda_familiar" & label == "mais de R$ 8.640") |                             
+      (variable == "Dificuldade_Financeira" & label == "Não") |                                         
+      (variable == "Dificuldade_Financeira" & label == "Sim") |                                        
+      (variable == "Acesso_Alimento" & label == "Não") |                                          
+      (variable == "Acesso_Alimento" & label == "Sim") |                                        
+      (variable == "Tempo_Preparo_Refeicao" & label == "Aumentou") |                                   
+      (variable == "Tempo_Preparo_Refeicao" & label == "Diminuiu") |                                     
+      (variable == "Tempo_Preparo_Refeicao" & label == "Não alterou") |                                  
+      (variable == "atividade_fisica_pandemia" & label == "Diminuiu") |                                   
+      (variable == "atividade_fisica_pandemia" & label == "Não alterou")
   ) %>%
+  modify_bold(
+    columns = stat_4,
+    rows =
+      (variable == "Raca_cor" & label == "Branca") |                                       
+      (variable == "Consulta_Nutricionista" & label == "Não") |                                        
+      (variable == "Consulta_Nutricionista" & label == "Sim") |                                         
+      (variable == "Tempo_Preparo_Refeicao" & label == "Diminuiu") |                                     
+      (variable == "atividade_fisica_pandemia" & label == "Aumentou")
+  )%>%
   modify_footnote(everything() ~ NA)%>%
   as_gt() %>%                   
   fmt_markdown(columns = label) %>%
@@ -183,4 +267,346 @@ tbl_summary(data = DadosQuali,
     heading.title.font.size = "26px",
     column_labels.font.size = "22px"
   )
+
+#-----Verificando as associações(quanti)-----
+
+dados_quanti=base |> 
+  select(Idade,
+         Altura,
+         Peso,
+         IMC)
+
+base_1=base |> 
+  select(Idade,
+         Altura,
+         Peso,
+         IMC,
+         Paes_Torradas_Biscoitos)
+
+#---#---#
+
+tbl_summary(data = dados_quanti,
+ statistic = all_continuous() ~ "{mean} ({sd})")
+
+tbl_summary(data = base_1,
+            by = Paes_Torradas_Biscoitos,
+ statistic = all_continuous() ~ "{mean} ({sd})")
+
+#---#---#
+
+ggplot(base_1, aes(x = Idade)) +
+  geom_density(fill = "blue", alpha = 0.6) +
+  facet_wrap(~ Paes_Torradas_Biscoitos) +
+  xlab("Idade") +
+  ylab("Densidade") +
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+ggplot(base_1, aes(sample = Idade)) +
+  stat_qq_band(fill="lightblue") +
+  stat_qq_line() +
+  stat_qq_point() +
+  facet_wrap(~Paes_Torradas_Biscoitos,scales = "free")+
+  xlab("Quantis Teoricos")+
+  ylab("Quantis Amostrais")+
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+by(base_1$Idade, base_1$Paes_Torradas_Biscoitos, shapiro.test)
+# Nega a normalidade
+
+
+
+ggplot(base_1, aes(x = Altura)) +
+  geom_density(fill = "blue", alpha = 0.6) +
+  facet_wrap(~ Paes_Torradas_Biscoitos) +
+  xlab("Idade") +
+  ylab("Densidade") +
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+ggplot(base_1, aes(sample = Altura)) +
+  stat_qq_band(fill="lightblue") +
+  stat_qq_line() +
+  stat_qq_point() +
+  facet_wrap(~Paes_Torradas_Biscoitos,scales = "free")+
+  xlab("Quantis Teoricos")+
+  ylab("Quantis Amostrais")+
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+by(base_1$Altura, base_1$Paes_Torradas_Biscoitos, shapiro.test)
+# Nega a normalidade e não nega
+
+
+
+ggplot(base_1, aes(x = Peso)) +
+  geom_density(fill = "blue", alpha = 0.6) +
+  facet_wrap(~ Paes_Torradas_Biscoitos) +
+  xlab("Idade") +
+  ylab("Densidade") +
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+ggplot(base_1, aes(sample = Peso)) +
+  stat_qq_band(fill="lightblue") +
+  stat_qq_line() +
+  stat_qq_point() +
+  facet_wrap(~Paes_Torradas_Biscoitos,scales = "free")+
+  xlab("Quantis Teoricos")+
+  ylab("Quantis Amostrais")+
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+by(base_1$Peso, base_1$Paes_Torradas_Biscoitos, shapiro.test)
+# Nega a normalidade e não nega
+
+
+
+ggplot(base_1, aes(x = IMC)) +
+  geom_density(fill = "blue", alpha = 0.6) +
+  facet_wrap(~ Paes_Torradas_Biscoitos) +
+  xlab("Idade") +
+  ylab("Densidade") +
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+ggplot(base_1, aes(sample = IMC)) +
+  stat_qq_band(fill="lightblue") +
+  stat_qq_line() +
+  stat_qq_point() +
+  facet_wrap(~Paes_Torradas_Biscoitos,scales = "free")+
+  xlab("Quantis Teoricos")+
+  ylab("Quantis Amostrais")+
+  theme_bw() +
+  theme(text = element_text(size = 14))
+
+by(base_1$IMC, base_1$Paes_Torradas_Biscoitos, shapiro.test)
+# Nega a normalidade
+
+#---#---#
+
+LeveneTest(formula = Idade~Paes_Torradas_Biscoitos,data = base_1)
+# heterogeneidade
+
+LeveneTest(formula = Altura~Paes_Torradas_Biscoitos,data = base_1)
+# homogeneidade
+
+LeveneTest(formula = Peso~Paes_Torradas_Biscoitos,data = base_1)
+# homogeneidade
+
+LeveneTest(formula = IMC~Paes_Torradas_Biscoitos,data = base_1)
+# homogeneidade
+
+#----- Criando a tabela final -----
+
+tabela_quanti = tbl_summary(
+  data = base_1,
+  by = Paes_Torradas_Biscoitos,
+  statistic = all_continuous() ~ "{mean} ({sd})",
+  label = list(
+    Idade ~ "Idade<sup>W</sup>",
+    Altura ~ "Altura<sup>T</sup>",
+    Peso ~ "Peso<sup>T</sup>",
+    IMC ~ "IMC<sup>T</sup>"
+  )
+) %>%
+  add_p(
+    test = everything() ~ "oneway.test",
+    test.args = list(
+      Idade  ~ list(var.equal = FALSE),
+      c(Altura, Peso, IMC) ~ list(var.equal = TRUE)
+    ),
+    pvalue_fun = label_style_pvalue(digits = 3)
+  ) %>%
+  bold_p(t = 0.05) %>%
+  modify_spanning_header(all_stat_cols() ~ "**Consumo de Pães, torradas e biscoitos**") %>%
+  modify_header(label ~ "**Variáveis**") %>%
+  bold_labels() %>%
+  modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)") %>%
+  modify_footnote(everything() ~ NA) %>%
+  as_gt() %>%
+  fmt_markdown(columns = label) %>%
+  tab_options(
+    table.font.size = "20px",
+    heading.title.font.size = "26px",
+    column_labels.font.size = "22px"
+  )
+
+tabela_quanti
+
+#----- Comparação de letras -----
+
+modelo_3=games_howell_test(Idade~Paes_Torradas_Biscoitos,
+                           data=base_1)
+
+modelo_1 <- aov(Altura ~ Paes_Torradas_Biscoitos, data = base_1)
+TukeyHSD(modelo_1)
+
+modelo_2 <- aov(IMC ~ Paes_Torradas_Biscoitos, data = base_1)
+TukeyHSD(modelo_2)
+
+#---#---#
+
+comparacoes_letras <- function(data, variable, by, ...) {
+  letras <- data.frame(
+    variavel = c("Idade", "Peso",
+                 "Altura", "IMC"),
+    comparacao = c(
+      "Aumentou = a<br>Diminuiu = ab<br>Não alterou = b<br>Não consumo = ab",
+      "Aumentou = a<br>Diminuiu = a<br>Não alterou = a<br>Não consumo = a",
+      "Aumentou = b<br>Diminuiu = b<br>Não alterou = a<br>Não consumo = ab",
+      "Aumentou = a<br>Diminuiu = ab<br>Não alterou = b<br>Não consumo = ab"
+    ),
+    stringsAsFactors = FALSE  
+  )
+  result <- letras$comparacao[letras$variavel == variable]
+  tibble::tibble(`**Comparações Múltiplas**` = result)
+}
+
+tabela_quanti_final=tbl_summary(data = base_1,
+                                by = Paes_Torradas_Biscoitos,
+                                statistic = all_continuous() ~ "{mean} ({sd})",
+                                label = list(
+                                  Idade ~ "Idade<sup>W</sup>",
+                                  Altura ~ "Altura<sup>A</sup>",
+                                  Peso ~ "Peso<sup>A</sup>",
+                                  IMC ~"IMC<sup>A</sup>")
+)%>%
+  add_p(
+    test = everything() ~ "oneway.test",
+    test.args = list(
+      c(Altura, Peso, IMC) ~ list(var.equal = T),
+      Idade ~ list(var.equal = F)  
+    ), 
+    pvalue_fun = label_style_pvalue(digits = 3)
+  )%>%
+  bold_p(t = 0.05) %>%
+  modify_spanning_header(all_stat_cols() ~ "**Consumo de Pães, torradas e biscoitos**") %>%
+  modify_header(label ~ "**Variáveis**") %>%
+  bold_labels() %>%
+  modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)")%>%
+  modify_footnote(everything() ~ NA)%>%
+  add_stat(
+    fns = everything() ~ comparacoes_letras,
+    location = everything() ~ "label"
+  ) %>%
+  as_gt() %>%                   
+  fmt_markdown(columns = c(label,`**Comparações Múltiplas**`))%>%
+  tab_options(
+    table.font.size = "20px",    
+    heading.title.font.size = "26px",
+    column_labels.font.size = "22px"
+  )
+
+tabela_quanti_final
+
 ```
+
+## Introdução
+
+* O estudo busca analisar os impactos da pandemia do COVID-19 nos aspectos sociais, econômicos e comportamentais da população.
+  * Dentre os temas abordados, se destaca as possíveis mudanças nos hábitos alimentares da população durante a pandemia.
+* Dentre os aspectos estudados, essa apresentação trabalha na categoria *pães, torradas e biscoitos*, com o objetivo de avaliar a existência de associação entre o consumo desses alimentos e fatores sociais, econômicos e comportamentais durante a pandemia.
+
+## Metodologia
+
+* Questionário online aplicado em 2022
+* $n=2310$
+
+## Dados Qualitativos {.scrollable}
+
+```{r}
+tbl_summary(data=dados_quali,
+            by=Paes_Torradas_Biscoitos,
+            percent = 'row',
+            label = list(Genero ~ "Gênero",
+                         Raca_cor ~ "Raça/cor",
+                         Regiao ~ "Região de residência",
+                         Isolamento ~ "Isolamento social",
+                         Trabalha ~ "Situação de trabalho",
+                         Profissional_Saude ~ "Profissional da saúde",
+                         Renda_familiar ~ "Faixa de renda familiar",
+                         Escolaridade ~ "Escolaridade",
+                         Covid ~ "Diagnóstico de COVID-19",
+                         Consulta_Nutricionista ~ "Consulta com nutricionista",
+                         Dificuldade_Financeira ~ "Dificuldade financeira",
+                         Acesso_Alimento ~ "Dificuldade ao acesso de alimentos",
+                         Tempo_Preparo_Refeicao ~ "Mudança no tempo de preparo das refeições",
+                         cigarro ~"Hábito de fumar cigarro",
+                         atividade_fisica_pandemia ~"Atividade física")) |> 
+  modify_header(label ~ "**Variáveis**")
+```
+
+## Dados Quantitativos
+
+```{r}
+tbl_summary(data = base_1,
+            by = Paes_Torradas_Biscoitos,
+ statistic = all_continuous() ~ "{mean} ({sd})") |> 
+  modify_header(label ~ "**Variáveis**")
+```
+
+## Resultados {.center style="text-align: center;"}
+
+## Variáveis Qualitativas {.scrollable}
+
+```{r}
+tabela_quali
+```
+
+## Variáveis Quantitativas {.scrollable}
+
+```{r}
+tabela_quanti_final
+```
+
+## Núvem de palavras {.scrollable}
+
+```{r, warning=FALSE}
+
+frequencia_palavras <- base %>%
+  mutate(texto_limpo = as.character(sentimentos_pandemia)) %>%
+  mutate(texto_limpo = str_replace_all(texto_limpo, "[\\.,!?;:()\\[\\]{}“”\"'-]", "")) %>%
+  mutate(texto_limpo = str_to_lower(texto_limpo)) %>%
+  unnest_tokens(output = palavra, input = texto_limpo) %>%
+  filter(palavra != "") %>%
+  filter(str_length(palavra) > 3) %>%
+  group_by(Paes_Torradas_Biscoitos, palavra) %>%   
+  summarise(n = n()) %>%   
+  mutate(porc = round((n / sum(n)) * 100, 2))   
+
+#---#---#
+
+frequencia_palavras$angle <- sample(c(0,90), nrow(frequencia_palavras), replace = TRUE)
+
+frequencia_palavras %>% 
+  ggplot(aes(label = palavra, 
+             size = log(n+1),
+             angle = angle,
+             color = n))+
+  scale_size_area(max_size = 11)+
+  scale_color_viridis_c()+
+  geom_text_wordcloud(seed=123,
+                      shape = "square",
+                      rm_outside = T)+
+  theme_bw()
+
+#---#---#
+
+frequencia_palavras %>% 
+  filter(n>4)%>%
+  ggplot(aes(label = palavra, 
+             size = log(n+1),
+             angle = angle,
+             color = as.character(n)))+   
+  scale_size_area(max_size = 18)+
+  scale_color_manual(values =glasbey()) +
+  geom_text_wordcloud(seed=123,
+                      shape = "square",
+                      rm_outside = T)+
+  theme_bw()
+
+```
+
+## Conclusão {.center style="text-align: center;"}

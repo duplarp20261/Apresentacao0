@@ -1,0 +1,186 @@
+---
+title: "Apresentação"
+author: Ramon Dias & Pedro Lucas
+format: 
+ revealjs:
+      css: custom_alpha.css
+      embed-resources: true
+---
+
+```{r include=FALSE}
+
+#--- Carregando pacotes ---#
+
+library(openxlsx)
+library(dplyr)
+library(gtsummary)
+library(gt)
+library(rstatix)
+library(litedown)
+
+#--- Tratamento dos dados ---#
+
+theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",")
+
+Dados = read.xlsx("DadosAviao.xlsx")
+
+DadosQuali = Dados %>% select(Checkin.service, Genero, Cliente, Idade,
+                              Tipo_Viagem, Classe, Distancia,
+                              Atraso_Partida, Atraso_Chegada)
+
+DadosQuali = DadosQuali %>%
+  mutate(Idade = recode(Idade,
+                        "30–50 anos" = "Entre 30 e 50",
+                        "<30 anos" = "Menor que 30 anos",
+                        ">50 anos" = "Maior que 50 anos"))
+
+DadosQuali = DadosQuali %>%
+  mutate(Distancia = recode(Distancia,
+                        " 500–1500 km" = "Entre 500 e 1500 Km",
+                        " <500 km" = "Menor que 500 Km",
+                        ">1500 km" = "Maior que 1500 Km"))
+
+#--- Tabela inicial ---#
+
+tbl_summary(data = DadosQuali,
+            by = Checkin.service,
+            percent = "row")
+
+#--- Verificação dos valores esperados ---#
+
+chisq.test(Dados$Genero,Dados$Checkin.service)$expected
+chisq.test(Dados$Cliente,Dados$Checkin.service)$expected
+chisq.test(Dados$Idade,Dados$Checkin.service)$expected
+chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$expected
+chisq.test(Dados$Classe,Dados$Checkin.service)$expected # 1
+chisq.test(Dados$Distancia,Dados$Checkin.service)$expected
+chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$expected
+chisq.test(Dados$Atraso_Chegada,Dados$Checkin.service)$expected
+
+#--- Análise de resíduos ---#
+
+chisq.test(Dados$Classe,Dados$Checkin.service)$stdres 
+chisq.test(Dados$Tipo_Viagem,Dados$Checkin.service)$stdres 
+chisq.test(Dados$Atraso_Partida,Dados$Checkin.service)$stdres
+
+#--- Função de Crammer ---#
+
+cramer_fun <- function(data, variable, by, ...) {
+  tab <- table(data[[variable]], data[[by]])
+  v <- cramer_v(tab)
+  tibble::tibble(`**Cramér**` = round(v, 3))
+}
+
+```
+
+## Construção da tabela final {.center style="text-align: center;"}
+
+## Verificação dos valores esperados {.center style="text-align: center;"}
+
+## Serviço de check-in X Classe
+
+|                | Insatisfeito | Neutro | Satisfeito |
+|:--------------:|:------------:|:------:|:----------:|
+|    Econômica   |      12      |  19,67 |    33,33   |
+| Econômica Plus |     4,43     |  7,26  |    12,31   |
+|    Executiva   |     19,57    |  32,07 |    54,36   |
+
+## Tabela dos p-valores {.center style="text-align: center;"}
+ 
+## {.scrollable}
+
+```{r}
+tbl_summary(data = DadosQuali,
+            by = Checkin.service,
+            percent = "row")%>%
+  add_p()
+```
+
+## Análise de resíduos {.center style="text-align: center;"}
+
+## {.scrollable}
+
+### Serviço de check-in X Classe
+
+|                | Insatisfeito | Neutro | Satisfeito |
+|:--------------:|:------------:|:------:|:----------:|
+|    Econômica   |    -1,958    |  0,441 |    1,114   |
+| Econômica Plus |     3,129    | -0,599 |   -1,879   |
+|    Executiva   |    -0,211    | -0,225 |    0,184   |
+
+
+::: {.spacer}
+:::
+  
+### Serviço de check-in X Tipo de Viagem
+
+|                   | Insatisfeito |  Neutro | Satisfeito |
+|:-----------------:|:------------:|:-------:|:----------:|
+| Viagem a negócios |     2,286    |   0,785 |   -2,496   |
+|   Viagem pessoal  |    -2,286    |  -0,785 |    2,496   |
+
+
+::: {.spacer}
+:::
+  
+### Serviço de check-in X Atraso de partida
+
+|            | Insatisfeito | Neutro | Satisfeito |
+|:----------:|:------------:|:------:|:----------:|
+| Com atraso |     6,089    | -1,608 |   -3,250   |
+| Sem atraso |    -6,089    |  1,608 |    3,250   |
+
+## Resultados {.center style="text-align: center;"}
+
+## {.scrollable}
+
+```{r}
+tbl_summary(data = DadosQuali,
+            by = Checkin.service,
+            percent = "row",
+            label = list(
+              Genero ~ "Gênero<sup>Q</sup>",
+              Cliente ~ "Tipo de Cliente<sup>Q</sup>",
+              Idade ~ "Idade<sup>Q</sup>",
+              Tipo_Viagem ~"Tipo de Viagem<sup>Q</sup>",
+              Classe ~ "Classe<sup>F</sup>",
+              Distancia ~ "Distância<sup>Q</sup>",
+              Atraso_Partida ~"Atraso na Partida<sup>Q</sup>",
+              Atraso_Chegada ~"Atraso na Chegada<sup>Q</sup>"
+            )
+)%>%
+  add_p(pvalue_fun = label_style_pvalue(digits = 3)) %>%
+  bold_p(t = 0.05) %>%
+  add_stat(fns = everything() ~ cramer_fun)%>%
+  modify_spanning_header(all_stat_cols() ~ "**Satisfação com o Serviço de Checkin**") %>%
+  modify_header(label ~ "**Variáveis**") %>%
+  bold_labels() %>%
+  modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)")%>%
+  modify_bold(
+    columns = stat_1,  # primeira coluna
+    rows = (variable == "Tipo_Viagem" & label == "Viagem a Negocios"| label=="Viagem Pessoal") | 
+      (variable == "Classe" & label == "Economica Plus") | 
+      (variable == "Atraso_Partida" & label == "Com atraso")
+  )%>%
+  modify_bold(
+    columns = stat_1,
+    rows = (variable == "Atraso_Partida" & label == "Sem atraso")
+  ) %>%
+  modify_bold(
+    columns = stat_3,  # terceira coluna
+    rows = (variable == "Tipo_Viagem" & label == "Viagem a Negocios"| label=="Viagem Pessoal") | 
+      (variable == "Atraso_Partida" & label == "Com atraso")
+    )%>%
+  modify_bold(
+    columns = stat_3,
+    rows = (variable == "Atraso_Partida" & label == "Sem atraso")
+  ) %>%
+  modify_footnote(everything() ~ NA)%>%
+  as_gt() %>%                   
+  fmt_markdown(columns = label) %>%
+  tab_options(
+    table.font.size = "20px",    
+    heading.title.font.size = "26px",
+    column_labels.font.size = "22px"
+  )
+```
